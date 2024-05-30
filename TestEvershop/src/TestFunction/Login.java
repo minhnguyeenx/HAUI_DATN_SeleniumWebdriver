@@ -33,7 +33,7 @@ public class Login {
 		driver.get(URL_login);
 	}
 	
-	@Test
+	@Test(priority=1, enabled=true)
 	public void loginByUser() {
 		login("minh_test_1@gmail.com", "Bb@123456");
 		
@@ -43,7 +43,7 @@ public class Login {
 		Assert.assertEquals(driver.getCurrentUrl(), URL_dashBoard);
 	}
 	
-	@Test
+	@Test(priority=2, enabled=true)
 	public void loginWrongEmail() {
 		login("minh_test_111@gmail.com", "Bb@123456");
 		
@@ -54,7 +54,7 @@ public class Login {
 		Assert.assertEquals(loginWrong, loginWrongMess);
 	}
 	
-	@Test
+	@Test(priority=3, enabled=true)
 	public void loginWrongPassword() {
 		login("minh_test_1@gmail.com", "Bb@1234567");
 		
@@ -65,7 +65,7 @@ public class Login {
 		Assert.assertEquals(loginWrong, loginWrongMess);
 	}
 
-	@Test
+	@Test(priority=4, enabled=true)
 	public void loginWithBlankField() {
 		login("", "");
 

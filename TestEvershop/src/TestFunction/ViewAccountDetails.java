@@ -32,7 +32,7 @@ public class ViewAccountDetails {
 		login("minh_test_1@gmail.com", "Bb@123456");
 	}
 	
-	@Test
+	@Test(priority=1, enabled=true)
 	public void viewAccountDetailCheck() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		WebElement iconLink = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/account']")));

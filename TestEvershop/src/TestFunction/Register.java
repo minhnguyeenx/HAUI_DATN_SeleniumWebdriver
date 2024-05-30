@@ -19,7 +19,7 @@ public class Register {
 	String URL_dashBoard = "http://localhost:3000/";
 	String registerWrongMess = "Email is already used";
 	String registerBlankMess = "This field can not be empty";
-	int numEmail = 8;
+//	int numEmail = 8;
 	
 	WebDriver driver;
 	
@@ -41,10 +41,10 @@ public class Register {
 		driver.get(URL_register);
 	}
 	
-	@Test
+	@Test(priority=1, enabled=true)
 	public void registerByGuest() {
-		String newEmail = emailAcc(numEmail);
-		register("minh test", newEmail, "Bb@123456");
+//		String newEmail = emailAcc(12);
+		register("minh test", "minh_test_13@gmail.com", "Bb@123456");
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.or(ExpectedConditions.urlToBe(URL_dashBoard)));
@@ -52,7 +52,7 @@ public class Register {
 		Assert.assertEquals(driver.getCurrentUrl(), URL_dashBoard);
 	}
 	
-	@Test
+	@Test(priority=2, enabled=true)
 	public void registerByExistedUser() {
 		String oldEmail = "minh_test_1@gmail.com";
 		register("minh test", oldEmail, "Bb@123456");
@@ -65,7 +65,7 @@ public class Register {
 		Assert.assertEquals(registerWrong, registerWrongMess);
 	}
 	
-	@Test
+	@Test(priority=3, enabled=true)
 	public void registerWithBlankField() {
 		register("", "", "");
 		

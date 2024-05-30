@@ -25,7 +25,7 @@ public class ViewProductDetail {
 		driver.findElement(By.cssSelector("button.button")).click();
 	}
 	
-	@Test
+	@Test(priority=1, enabled=true)
 	public void viewProductDetailNotLoggedIn() {
 		//Notlogin-> Homepage
 		driver = new ChromeDriver();
@@ -51,7 +51,7 @@ public class ViewProductDetail {
         }
 	}
 	
-	@Test
+	@Test(priority=2, enabled=true)
 	public void viewProductDetailLoggedIn() {
 		//login
 		driver = new ChromeDriver();

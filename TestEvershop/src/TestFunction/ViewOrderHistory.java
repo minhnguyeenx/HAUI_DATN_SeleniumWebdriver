@@ -34,14 +34,41 @@ public class ViewOrderHistory {
 		driver.get(URL_login);
 	}
 	
-	@Test
+	@Test(priority=1, enabled=true)
 	public void viewOrderHistoryHasNoProduct() {
+		login("minh_test_10@gmail.com", "Bb@123456");
+		
+		//Click view order list
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebElement iconLink = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/account']")));
+		iconLink.click();
+		
+		// Get text "Order History"
+	    WebElement orderHistoryHeading = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Order History']")));
+	    Assert.assertTrue(orderHistoryHeading.isDisplayed());
 
+	    // Get text "You have not placed any orders yet"
+	    WebElement emptyOrderHistoryMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.order-history-empty")));
+	    Assert.assertTrue(emptyOrderHistoryMessage.isDisplayed());
+	    Assert.assertTrue(emptyOrderHistoryMessage.isDisplayed());
 	}
 	
-	@Test
+	@Test(priority=2, enabled=true)
 	public void viewOrderHistoryHasProduct() {
+		login("minh_test_4@gmail.com", "Bb@123456");
+		
+		//Click view order list
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebElement iconLink = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/account']")));
+		iconLink.click();
+		
+		// Get text "Order History"
+	    WebElement orderHistoryHeading = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Order History']")));
+	    Assert.assertTrue(orderHistoryHeading.isDisplayed());
 
+	    // Get element has class "order-number"
+	    List<WebElement> orderNumbers = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(".order-number")));
+	    Assert.assertFalse(orderNumbers.isEmpty());
 	}
 	
 	@AfterMethod

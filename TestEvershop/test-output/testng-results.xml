@@ -1,71 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-14T12:40:29 ICT" name="Default suite" finished-at="2024-05-14T12:40:50 ICT" duration-ms="21257">
+  <suite started-at="2024-05-30T08:09:27 ICT" name="Default suite" finished-at="2024-05-30T08:09:36 ICT" duration-ms="9510">
     <groups>
     </groups>
-    <test started-at="2024-05-14T12:40:29 ICT" name="Default test" finished-at="2024-05-14T12:40:50 ICT" duration-ms="21257">
-      <class name="TestFunction.Purchase">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:TestFunction.Purchase@57fd91c9]" started-at="2024-05-14T12:40:29 ICT" name="setUp" finished-at="2024-05-14T12:40:34 ICT" duration-ms="4915" status="PASS">
+    <test started-at="2024-05-30T08:09:27 ICT" name="Default test" finished-at="2024-05-30T08:09:36 ICT" duration-ms="9510">
+      <class name="TestFunction.Login">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:27 ICT" name="setUp" finished-at="2024-05-30T08:09:29 ICT" duration-ms="2384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="paymentHasNoAddress()[pri:3, instance:TestFunction.Purchase@57fd91c9]" started-at="2024-05-14T12:40:34 ICT" name="paymentHasNoAddress" finished-at="2024-05-14T12:40:50 ICT" duration-ms="16233" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[contains(text(), 'required')] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\minh0\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61285}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61285/devtoo..., se:cdpVersion: 124.0.6367.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7c7f245eb9d75044dad22352fa40651e]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[contains(text(), 'required')] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\minh0\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61285}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61285/devtoo..., se:cdpVersion: 124.0.6367.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7c7f245eb9d75044dad22352fa40651e
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at TestFunction.Purchase.paymentHasNoAddress(Purchase.java:258)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="loginByUser()[pri:1, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:29 ICT" name="loginByUser" finished-at="2024-05-30T08:09:30 ICT" duration-ms="846" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- paymentHasNoAddress -->
-      </class> <!-- TestFunction.Purchase -->
+        </test-method> <!-- loginByUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:30 ICT" name="tearDown" finished-at="2024-05-30T08:09:30 ICT" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:30 ICT" name="setUp" finished-at="2024-05-30T08:09:32 ICT" duration-ms="1272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginWrongEmail()[pri:2, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:32 ICT" name="loginWrongEmail" finished-at="2024-05-30T08:09:32 ICT" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWrongEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:32 ICT" name="tearDown" finished-at="2024-05-30T08:09:32 ICT" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:32 ICT" name="setUp" finished-at="2024-05-30T08:09:33 ICT" duration-ms="1203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginWrongPassword()[pri:3, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:33 ICT" name="loginWrongPassword" finished-at="2024-05-30T08:09:34 ICT" duration-ms="923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWrongPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:34 ICT" name="tearDown" finished-at="2024-05-30T08:09:34 ICT" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:34 ICT" name="setUp" finished-at="2024-05-30T08:09:36 ICT" duration-ms="1177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginWithBlankField()[pri:4, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:36 ICT" name="loginWithBlankField" finished-at="2024-05-30T08:09:36 ICT" duration-ms="496" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBlankField -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFunction.Login@52045dbe]" started-at="2024-05-30T08:09:36 ICT" name="tearDown" finished-at="2024-05-30T08:09:36 ICT" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestFunction.Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

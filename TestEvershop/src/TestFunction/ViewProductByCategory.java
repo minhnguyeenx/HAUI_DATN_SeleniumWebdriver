@@ -22,7 +22,7 @@ public class ViewProductByCategory {
 		driver.get(URL_dashBoard);
 	}
 	
-	@Test
+	@Test(priority=1, enabled=true)
 	public void categoryHasProduct() {
 		//Click Men
 		WebElement menLink = driver.findElement(By.xpath("//a[text()='Men']"));
@@ -37,7 +37,7 @@ public class ViewProductByCategory {
 		Assert.assertTrue(!productList.isEmpty());
 	}
 	
-	@Test
+	@Test(priority=2, enabled=true)
 	public void categoryHasNoProduct() {
 		//Click Kids
 		WebElement kidsLink = driver.findElement(By.xpath("//a[text()='Kids']"));

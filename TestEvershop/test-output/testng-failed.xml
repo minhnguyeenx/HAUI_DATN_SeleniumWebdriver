@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestFunction.Purchase">
+      <class name="TestFunction.Search">
         <methods>
           <include name="setUp"/>
-          <include name="paymentHasNoAddress"/>
+          <include name="searchWithCorrectName"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestFunction.Purchase -->
+      </class> <!-- TestFunction.Search -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
